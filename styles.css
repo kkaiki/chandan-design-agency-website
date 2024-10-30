@@ -104,11 +104,13 @@ p {
     max-width: 800px;
     margin: 0 auto 40px;
 }
+
 .brand-details {
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 40px;
+
 }
 .brand-image {
     flex: 1;
@@ -373,3 +375,10 @@ footer {
     text-align: center;
     font-size: 14px;
 }
+
+@media (max-width:768px){
+.brand-details{
+    flex-direction: column;
+} 
+}
+
