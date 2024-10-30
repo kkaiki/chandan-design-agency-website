@@ -380,5 +380,23 @@ footer {
 .brand-details{
     flex-direction: column;
 } 
+
+.service-grid  {
+   
+    grid-template-columns: repeat(2, 1fr);
+   }
+
+
+.service-grid > :nth-last-child(-n+4)  {
+   display: none;
+    }
+
+
+    .testimonial-card {
+       
+       flex-direction: column;
+        gap: 60px;
+        height: 60vh;
+    }
 }
 
