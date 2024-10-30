@@ -456,3 +456,17 @@ footer {
     }
 }
 
+
+@media (max-width: 768px) {
+
+    .blog-grid {
+        
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .blog-grid > :nth-last-child(-n+1)  {
+        display: none;
+         }
+
+}
