@@ -2,22 +2,19 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: "Proxima Nova", Arial, sans-serif;
 }
 
 body {
     background-color: #f0f8ff;
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
 header {
     background-color: white;
     padding: 20px 0;
+    width: 100%;
+    padding-left: 5%;
+    padding-right: 5%;
 }
 
 .header-content {
@@ -27,16 +24,11 @@ header {
 }
 
 .logo {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    width: 70px;
+    height: 70px;
 }
 
 .menu-icon {
-    font-size: 24px;
     cursor: pointer;
 }
 
@@ -44,11 +36,14 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 50px 0;
+    padding: 50px 5%;
 }
 
 .hero-content {
-    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 50%;
 }
 
 .hero-image {
@@ -62,22 +57,19 @@ header {
 }
 
 h1 {
-    font-size: 36px;
-    margin-bottom: 20px;
+    font-size: 54px;
 }
 
 h2 {
     font-size: 32px;
-    margin-bottom: 20px;
 }
 
 p {
-    margin-bottom: 20px;
     line-height: 1.6;
 }
 
 .btn {
-    display: inline-block;
+    display: flex;
     padding: 10px 20px;
     background-color: #4169e1;
     color: white;
@@ -86,16 +78,18 @@ p {
     border: none;
     cursor: pointer;
     font-size: 16px;
+    width: max-content;
+    align-items: center;
+    gap: 7px;
 }
 
 .brand-identity {
     background-color: white;
-    padding: 50px 0;
+    padding: 50px 5%;
     text-align: center;
 }
 
 .brand-content {
-    max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
 }
@@ -149,12 +143,11 @@ p {
 }
 
 .services {
-    padding: 50px 0;
-}
-
-.services h2 {
-    text-align: center;
-    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 50px 5%;
 }
 
 .service-grid {
@@ -196,12 +189,16 @@ p {
 }
 
 .testimonials {
-    background: #F4F6FE;
-    padding: 50px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 82px;
+    padding: 50px 5%;
+    background: white;
 }
 
 .testimonial-card {
-    background-color: white;
+    background: #F4F6FE;
     border-radius: 10px;
     padding: 30px;
     display: flex;
@@ -258,7 +255,7 @@ p {
 
 .contact {
     background-color: #f0f8ff;
-    padding: 50px 0;
+    padding: 50px 5%;
 }
 
 .contact h2 {
@@ -277,17 +274,16 @@ p {
 
 .contact-container {
     display: flex;
-    max-width: 1200px;
     margin: 0 auto;
-    background-color: white;
     border-radius: 10px;
     overflow: hidden;
 }
 
 .contact-info {
-    flex: 1;
+    display: flex;
+    flex-direction: column;
     padding: 50px;
-    background-color: #f0f8ff;
+    width: 50%;
 }
 
 .contact-form {
@@ -334,7 +330,7 @@ p {
 }
 
 .blog {
-    padding: 50px 0;
+    padding: 50px 5%;
     background-color: white;
 }
 
@@ -377,46 +373,20 @@ p {
 footer {
     background-color: #0e0e1a;
     color: #f2f2f2;
-    padding: 60px 0;
-    font-family: Arial, sans-serif;
+    padding-top: 60px;
 }
 
 .footer-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    max-width: 1200px;
-    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr [col-start]);
+    padding-left: 5%;
+    padding-right: 5%;
 }
 
 .footer-logo-section {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
     gap: 10px;
-    flex: 1;
-}
-
-.footer-contact {
-    flex: 1;
-}
-
-.footer-right {
-    display: flex;
-    flex-direction: row;
-    gap: 40%;
-    flex: 2;
-    justify-content: flex-start;
-
-}
-
-.footer-explore {
-    margin-left: 90px;
-}
-
-.footer-explore,
-.footer-subscribe {
-    max-width: 200px;
 }
 
 .footer-social {
@@ -493,34 +463,30 @@ footer {
 }
 
 .footer-bottom {
-    margin-top: 30px;
     text-align: center;
     font-size: 13px;
     color: #888;
     padding-top: 20px;
     border-top: 1px solid #333;
-    max-width: 1200px;
-    margin: 0 auto;
+    margin-top: 80px;
 }
 
+@media (max-width: 768px) {
+    h1 {
+        font-size: 32px;
+    }
 
-
-
-@media (max-width:768px) {
     .brand-details {
         flex-direction: column;
     }
 
     .service-grid {
-
         grid-template-columns: repeat(2, 1fr);
     }
-
 
     .service-grid> :nth-last-child(-n+4) {
         display: none;
     }
-
 
     .testimonial-card {
         flex-direction: column;
@@ -532,23 +498,19 @@ footer {
     }
 
     .contact-container {
-        display: flex;
         flex-direction: column;
         padding: 20px;
-        background-color: #e6f0ff;
         gap: 20px;
         max-width: 90%;
         margin: 0 auto;
     }
 
-
     .contact-info {
-        display: grid;
-        grid-template-areas:
-            "address contact"
-            "email contact";
-        background-color: transparent;
-        gap: 25px;
+       flex-direction: row;
+       width: 100%;
+       padding: 0px;
+       flex-wrap: wrap;
+       gap: 15px;
     }
 
     .contact-info-item {
@@ -567,7 +529,6 @@ footer {
         height: 24px;
     }
 
-
     .contact-form {
         width: 100%;
         max-width: 400px;
@@ -577,13 +538,11 @@ footer {
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
 
-
     .contact-form .btn {
         padding: 12px;
     }
 
     .blog-grid {
-
         grid-template-columns: repeat(2, 1fr);
         gap: 20px;
     }
@@ -593,34 +552,73 @@ footer {
     }
 
     .footer-content {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 20px;
-    }
-
-    .footer-logo-section {
-        grid-column: 1 / 2;
-        grid-row: 1;
-    }
-
-    .footer-contact {
-        grid-column: 1 / 2;
-        grid-row: 2;
-    }
-
-    .footer-right {
-
-        grid-row: 1 / 3;
-        display: flex;
-        flex-direction: column-reverse;
-        align-items: flex-start;
-        gap: 20px;
+        grid-template-columns: repeat(2, 1fr [col-start]);
+        gap: 40px;
     }
 
     .footer-explore,
     .footer-subscribe {
         width: 100%;
         flex-direction: column-reverse;
+    }
+}
 
+@media (max-width: 430px) {
+    h1 {
+        font-size: 24px;
+    }
+
+    .hero {
+        flex-direction: column;
+        gap: 44px
+    }
+
+    .hero-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .hero-content > h1 {
+        text-align: center;
+    }
+    
+    .brand-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 30px;
+    }
+
+    .brand-title {
+        font-size: 24px;
+    }
+
+    .brand-text {
+        text-align: center;
+    }
+
+    .contact-info {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .blog-grid {
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .footer-content {
+        grid-template-columns: repeat(1, 1fr [col-start]);
+        gap: 40px;
+    }
+
+    .footer-logo-section {
+         display: flex;
+         flex-direction: row;
     }
 }
