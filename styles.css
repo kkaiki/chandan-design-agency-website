@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: "Proxima Nova", Arial, sans-serif;
 }
 
 body {
@@ -40,7 +40,10 @@ header {
 }
 
 .hero-content {
-    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 50%;
 }
 
 .hero-image {
@@ -54,13 +57,11 @@ header {
 }
 
 h1 {
-    font-size: 36px;
-    margin-bottom: 20px;
+    font-size: 54px;
 }
 
 h2 {
     font-size: 32px;
-    margin-bottom: 20px;
 }
 
 p {
@@ -78,6 +79,8 @@ p {
     cursor: pointer;
     font-size: 16px;
     width: max-content;
+    align-items: center;
+    gap: 7px;
 }
 
 .brand-identity {
@@ -272,15 +275,15 @@ p {
 .contact-container {
     display: flex;
     margin: 0 auto;
-    background-color: white;
     border-radius: 10px;
     overflow: hidden;
 }
 
 .contact-info {
-    flex: 1;
+    display: flex;
+    flex-direction: column;
     padding: 50px;
-    background-color: #f0f8ff;
+    width: 50%;
 }
 
 .contact-form {
@@ -469,6 +472,10 @@ footer {
 }
 
 @media (max-width: 768px) {
+    h1 {
+        font-size: 32px;
+    }
+
     .brand-details {
         flex-direction: column;
     }
@@ -491,22 +498,19 @@ footer {
     }
 
     .contact-container {
-        display: flex;
         flex-direction: column;
         padding: 20px;
-        background-color: #e6f0ff;
         gap: 20px;
         max-width: 90%;
         margin: 0 auto;
     }
 
     .contact-info {
-        display: grid;
-        grid-template-areas:
-            "address contact"
-            "email contact";
-        background-color: transparent;
-        gap: 25px;
+       flex-direction: row;
+       width: 100%;
+       padding: 0px;
+       flex-wrap: wrap;
+       gap: 15px;
     }
 
     .contact-info-item {
@@ -560,6 +564,10 @@ footer {
 }
 
 @media (max-width: 430px) {
+    h1 {
+        font-size: 24px;
+    }
+
     .hero {
         flex-direction: column;
         gap: 44px
@@ -570,6 +578,7 @@ footer {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        width: 100%;
     }
 
     .hero-content > h1 {
@@ -594,6 +603,7 @@ footer {
     .contact-info {
         display: flex;
         flex-direction: column;
+        width: 100%;
     }
 
     .blog-grid {
